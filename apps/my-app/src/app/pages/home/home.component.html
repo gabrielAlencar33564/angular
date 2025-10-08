@@ -1,0 +1,26 @@
+<div>
+  <h2>Home</h2>
+  <p>Contador: {{ count() }}</p>
+  <p>
+    Link para teste: <a [attr.href]="link" target="_blank">{{ link }}</a>
+  </p>
+  <button (click)="addCount()">Adicionar contador</button>
+
+  <hr />
+
+  <h3>Lista de Usuários</h3>
+  @for(user of userService.users(); track user.id) {
+  <user-profile
+    [counter]="count"
+    [user]="user"
+    (notifyParent)="handleChildEvent($event)"
+  >
+  </user-profile>
+  }
+
+  <hr />
+  <h3>Mensagens do Filho</h3>
+  <ul>
+    <li *ngFor="let msg of messages">{{ msg }}</li>
+  </ul>
+</div>

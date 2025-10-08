@@ -1,0 +1,18 @@
+.user-card {
+  border: 1px solid #127c54;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background-color: #e0f7f1;
+}
+button {
+  background-color: #127c54;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0e6549;
+}
